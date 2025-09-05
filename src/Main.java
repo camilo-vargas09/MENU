@@ -14,7 +14,9 @@ public class Main {
                 System.out.println("1. 2 dados ");
                 System.out.println("2. 3 dados");
                 System.out.println("3. indice de masa corporal (IMC)");
-                System.out.println("4. salir");
+                System.out.println("4. ");
+                System.out.println("5. ");
+                System.out.println("6. salir");
                 opciones= teclado.nextInt();
                 switch (opciones) {
                     case 1:
@@ -30,8 +32,15 @@ public class Main {
                         break;
 
                     case 4:
+                        break;
+                    case 5:
+                        break;
+
+                    case 6:
                         x=false;
+                        break;
                 }
+
             }
 
         }
