@@ -171,26 +171,26 @@ public class Main {
 
     public static void calculadoraMilisegundos() {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         int dias, horas, minutos, segundos;
 
         System.out.print("Ingrese día: ");
-        dias = scanner.nextInt();
+        dias = teclado.nextInt();
 
         System.out.print("Ingrese horas: ");
-        horas = scanner.nextInt();
+        horas = teclado.nextInt();
 
         System.out.print("Ingrese minutos: ");
-        minutos = scanner.nextInt();
+        minutos = teclado.nextInt();
 
         System.out.print("Ingrese segundos: ");
-        segundos = scanner.nextInt();
+        segundos = teclado.nextInt();
 
-        long totalMillisegundos = convertToMilliseconds(dias, horas, minutos, segundos);
+        long totalMillisegundos = convertirMilisegundos(dias, horas, minutos, segundos);
         System.out.println("La cantidad total es de : " + totalMillisegundos + " milisegundos");
     }
 
-    public static long convertToMilliseconds(int dias, int horas, int minutos, int segundos) {
+    public static long convertirMilisegundos(int dias, int horas, int minutos, int segundos) {
         long millisegundos = 0;
         millisegundos += dias * 24L * 60 * 60 * 1000;
         millisegundos += horas * 60L * 60 * 1000;
