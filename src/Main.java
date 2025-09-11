@@ -16,7 +16,7 @@ public class Main {
             System.out.println("2. 3 dados ");
             System.out.println("3. indice de masa corporal (IMC)");
             System.out.println("4. calaculadora de milisegundos ");
-            System.out.println("5. ...");
+            System.out.println("5. carrera entre dos corredores");
             System.out.println("6. salir");
             opciones = teclado.nextInt();
             switch (opciones) {
@@ -36,7 +36,7 @@ public class Main {
                     calculadoraMilisegundos();
                     break;
                 case 5:
-
+                    corredor();
                     break;
 
                 case 6:
@@ -198,6 +198,36 @@ public class Main {
         millisegundos += segundos * 1000L;
         return millisegundos;
     }
+    public static void corredor () {
+
+        Random aleatorio = new Random();
+        int p1=0, p2=0, corredor1 = 0, corredor2 = 0;
+        while (corredor1 < 50 && corredor2 < 50 ) {
+
+            p1 = aleatorio.nextInt((6 - 1) + 1) + 1;
+            p2 = aleatorio.nextInt((6 - 1) + 1) + 1;
+
+            corredor1 += p1;
+            corredor2 += p2;
+
+            System.out.println("total pasos corredor 1 " + corredor1);
+            System.out.println("total pasos corredor 2 " + corredor2);
+
+            if (corredor2 == 50 && corredor1 == 50) {
+                System.out.println("ambos corredores ganan");
+            }else if (corredor1 > 50 && corredor2 <= 50) {
+                System.out.println("el corredor 1 gana");
+            } else if (corredor2 > 50 && corredor1 <= 50) {
+                System.out.println("corredor 2 gana");
+
+            } if ( p1 == 6) {
+                corredor1 -= 2;
+            } if (p2 == 6) {
+                corredor2 -= 2;
+            }
+        }
+    }
+
 
 
 
